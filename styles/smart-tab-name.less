@@ -7,6 +7,8 @@
 /*.tab-bar .tab.active .title,*/
 .tab-bar .tab .title {
   display: flex;
+  -webkit-mask: linear-gradient(to right, rgba(0, 0, 0, 0), #000000 1em) no-repeat !important;
+  position: relative;
 }
 
 .tab-bar .tab .title::before, /* icons ? */
@@ -16,10 +18,10 @@
 }
 
 .smart-tab-name {
+  position: absolute;
+  right: 0;
   flex: 1;
   display: inline-block;
-  direction: rtl;
-  -webkit-mask: linear-gradient(to right, rgba(0, 0, 0, 0), #000000 1em) no-repeat;
 }
 
   .smart-tab-name .index-filename {

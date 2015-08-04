@@ -65,7 +65,8 @@ processAllTabs = (revert=false)->
       else if not container? and not revert
         log "applying #{path}",2
         paths[path] ?= parsePath path
-        tab.innerHTML = ""
+        # so it does not collapse when we position absolute
+        tab.innerHTML = "&nbsp;"
         container = document.createElement("div")
         container.classList.add "smart-tab-name"
 
